@@ -29,6 +29,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
+    assets:
+    - assets/images/profile_photo.png
     sdk: flutter
 
 
