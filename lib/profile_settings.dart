@@ -10,7 +10,7 @@ class ProfileSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 375,
-      height: 150, // Увеличили высоту контейнера для полного отображения текста
+      height: 150,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(),
       child: Column(
@@ -20,17 +20,12 @@ class ProfileSettings extends StatelessWidget {
         children: [
           Container(width: 375, height: 14),
           Container(
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(width: 16, height: 40),
-                Container(
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(),
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 12, bottom: 20, left: 16, right: 16),
+                child: (Container(
                   child: const Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -61,19 +56,16 @@ class ProfileSettings extends StatelessWidget {
                             fontSize: 14,
                             fontFamily: 'SF Pro Text',
                             fontWeight: FontWeight.w500,
-                            height:
-                                1.3, // Увеличили высоту строки для улучшения читаемости текста
+                            height: 1.3,
                             letterSpacing: -0.42,
                           ),
                         ),
                       ),
+                      Cards(),
                     ],
                   ),
-                ),
-              ],
-            ),
-          ),
-          Container(width: 375),
+                )),
+              ))
         ],
       ),
     );

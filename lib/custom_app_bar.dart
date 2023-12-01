@@ -35,12 +35,11 @@ class CustomAppBar extends StatelessWidget {
                 ],
               ),
               const TabBar(
-                indicatorColor:
-                    const Color(0xFF08A652), // Цвет индикатора при клике на Tab
+                indicatorColor: const Color(0xFF08A652),
                 tabs: [
                   Tab(
                     child: SizedBox(
-                      width: 187.50,
+                      width: double.infinity,
                       height: 20,
                       child: Text(
                         'Профиль',
@@ -58,7 +57,7 @@ class CustomAppBar extends StatelessWidget {
                   ),
                   Tab(
                     child: SizedBox(
-                      width: 187.50,
+                      width: double.infinity,
                       height: 20,
                       child: Text(
                         'Настройки',
@@ -76,7 +75,7 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 ],
               ),
-              Expanded(
+              const Expanded(
                 child: TabBarView(
                   children: [
                     ProfileSettings(),
