@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_theme/app_theme.dart';
 
 class Profile extends StatelessWidget {
   const Profile({
@@ -35,12 +36,7 @@ class Profile extends StatelessWidget {
           padding: EdgeInsets.only(top: 36),
           child: Text(
             'Екатерина',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 24,
-              fontFamily: 'SF Pro Display',
-              fontWeight: FontWeight.w700,
-            ),
+            style: AppTheme.titleTextStyle,
           ),
         ),
         const SizedBox(height: 14),

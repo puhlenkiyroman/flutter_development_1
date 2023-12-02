@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_development_1/profile.dart';
 import 'package:flutter_development_1/profile_settings.dart';
+import 'app_theme/app_theme.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2, // количество вкладок
+      length: 2,
       child: Scaffold(
         body: SafeArea(
           child: Column(
@@ -21,21 +22,21 @@ class CustomAppBar extends StatelessWidget {
                     onPressed: () {},
                     icon: const Icon(
                       Icons.close_rounded,
-                      color: Color(0xFF08A652),
+                      color: AppTheme.primaryColor,
                     ),
                   ),
-                  Profile(),
+                  const Profile(),
                   IconButton(
                     onPressed: () {},
                     icon: const Icon(
                       Icons.arrow_forward_rounded,
-                      color: Color(0xFF08A652),
+                      color: AppTheme.primaryColor,
                     ),
                   ),
                 ],
               ),
               const TabBar(
-                indicatorColor: const Color(0xFF08A652),
+                indicatorColor: AppTheme.primaryColor,
                 tabs: [
                   Tab(
                     child: SizedBox(
@@ -44,14 +45,7 @@ class CustomAppBar extends StatelessWidget {
                       child: Text(
                         'Профиль',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontFamily: 'SF Pro Text',
-                          fontWeight: FontWeight.w500,
-                          height: 0.08,
-                          letterSpacing: -0.40,
-                        ),
+                        style: AppTheme.tabBarTextStyle,
                       ),
                     ),
                   ),
@@ -62,14 +56,7 @@ class CustomAppBar extends StatelessWidget {
                       child: Text(
                         'Настройки',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontFamily: 'SF Pro Text',
-                          fontWeight: FontWeight.w500,
-                          height: 0.08,
-                          letterSpacing: -0.40,
-                        ),
+                        style: AppTheme.tabBarTextStyle,
                       ),
                     ),
                   ),
