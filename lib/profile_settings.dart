@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'app_theme/app_theme.dart';
+import 'App_Theme/builder.dart';
 import 'package:flutter_development_1/cards.dart';
+import 'package:flutter_development_1/tarifs.dart';
 
 class ProfileSettings extends StatelessWidget {
   const ProfileSettings({
@@ -13,46 +15,46 @@ class ProfileSettings extends StatelessWidget {
       width: 375,
       height: 150,
       clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(width: 375, height: 14),
+          SizedBox(width: 375, height: 14),
           Container(
             clipBehavior: Clip.antiAlias,
-            decoration: const BoxDecoration(),
+            decoration: BoxDecoration(),
             child: Padding(
-              padding: const EdgeInsets.only(
-                top: 12,
-                bottom: 20,
-                left: 16,
-                right: 16,
+              padding: const EdgeInsets.symmetric(
+                vertical: 12,
+                horizontal: 16,
               ),
               child: Container(
-                child: const Column(
+                child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 12),
-                    SizedBox(
-                      width: 343,
-                      child: Text(
-                        'У вас подключено',
-                        style: AppTheme.titleTextStyle,
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: CustomBuilder.buildTitle('У вас подключено'),
                     ),
-                    SizedBox(height: 12),
-                    SizedBox(
-                      width: 343,
-                      child: Text(
-                        'Подписки, автоплатежи и сервисы на которые \nвы подписались',
-                        style: AppTheme.subtitleTextStyle,
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 0),
+                      child: CustomBuilder.buildSubtitle(
+                          'Подписки, автоплатежи и сервисы на которые \nвы подписались'),
                     ),
                     Cards(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: CustomBuilder.buildTitle('Тарифы и лимиты'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 0),
+                      child: CustomBuilder.buildSubtitle(
+                          'Для операций в Сбербанк Онлайн'),
+                    ),
                   ],
                 ),
               ),
