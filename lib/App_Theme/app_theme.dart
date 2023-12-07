@@ -5,7 +5,8 @@ class AppTheme {
   static const Color primaryColor = Color(0xFF08A652);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
-  static const Color greyColor = Colors.grey;
+  static const Color greyColor = Color(0x8D000000);
+  static const Color dividerThinColor = Color(0x1F000000);
   static const Color shadowColor1 = Color(0x114F4F6C);
   static const Color shadowColor2 = Color(0x14000000);
 
@@ -13,6 +14,7 @@ class AppTheme {
   static const double fontSizeSmall = 14;
   static const double fontSizeMedium = 16;
   static const double fontSizeLarge = 20;
+  static const double fontSizeProfile = 24;
 
   // Семейство шрифтов
   static const String fontFamily = 'SF Pro Text';
@@ -39,7 +41,7 @@ class AppTheme {
 
   static const TextStyle largeTextStyle = TextStyle(
     color: blackColor,
-    fontSize: fontSizeLarge,
+    fontSize: fontSizeProfile,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
     height: 1.2,
@@ -51,7 +53,7 @@ class AppTheme {
     fontSize: fontSizeSmall,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w500,
-    height: 1.3,
+    height: 0.09,
     letterSpacing: -0.42,
   );
 
@@ -60,16 +62,23 @@ class AppTheme {
     fontSize: fontSizeLarge,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
-    height: 1.2,
+    height: 0.06,
     letterSpacing: -0.70,
   );
 
-  static const TextStyle subtitleTextStyle = TextStyle(
-    color: greyColor,
-    fontSize: fontSizeSmall,
+  static const TextStyle titleTarifTextStyle = TextStyle(
+    color: blackColor,
+    fontSize: fontSizeMedium,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w500,
-    height: 1.3,
-    letterSpacing: -0.42,
+    height: 1.25,
+  );
+
+  static const TextStyle subtitleTarifTextStyle = TextStyle(
+    color: greyColor,
+    fontSize: fontSizeMedium,
+    fontFamily: fontFamily,
+    fontWeight: FontWeight.w500,
+    height: 1.29,
   );
 }

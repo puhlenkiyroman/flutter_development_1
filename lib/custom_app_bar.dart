@@ -11,67 +11,70 @@ class CustomAppBar extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        body: SafeArea(
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.close_rounded,
-                      color: AppTheme.primaryColor,
+        body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
+            return [
+              SliverAppBar(
+                backgroundColor: AppTheme.whiteColor,
+                floating: true,
+                expandedHeight: 280,
+                flexibleSpace: PreferredSize(
+                  preferredSize: Size.fromHeight(52),
+                  child: FlexibleSpaceBar(
+                    collapseMode: CollapseMode.pin,
+                    background: Column(
+                      children: [
+                        const SizedBox(height: 52),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.close_rounded,
+                                size: 24,
+                                color: AppTheme.primaryColor,
+                              ),
+                            ),
+                            const Profile(),
+                            IconButton(
+                              onPressed: () {},
+                              icon: ImageIcon(
+                                AssetImage(
+                                    'assets/images/arrow_right_square.png'),
+                                color: AppTheme.primaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  const Profile(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.arrow_forward_rounded,
-                      color: AppTheme.primaryColor,
+                ),
+                bottom: TabBar(
+                  indicatorColor: AppTheme.primaryColor,
+                  labelStyle:
+                      AppTheme.tabBarTextStyle.copyWith(color: Colors.black),
+                  unselectedLabelStyle:
+                      AppTheme.tabBarTextStyle.copyWith(color: Colors.grey),
+                  tabs: [
+                    Tab(
+                      text: 'Профиль',
                     ),
-                  ),
-                ],
-              ),
-              const TabBar(
-                indicatorColor: AppTheme.primaryColor,
-                tabs: [
-                  Tab(
-                    child: SizedBox(
-                      width: double.infinity,
-                      height: 20,
-                      child: Text(
-                        'Профиль',
-                        textAlign: TextAlign.center,
-                        style: AppTheme.tabBarTextStyle,
-                      ),
-                    ),
-                  ),
-                  Tab(
-                    child: SizedBox(
-                      width: double.infinity,
-                      height: 20,
-                      child: Text(
-                        'Настройки',
-                        textAlign: TextAlign.center,
-                        style: AppTheme.tabBarTextStyle,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const Expanded(
-                child: TabBarView(
-                  children: [
-                    ProfileSettings(),
-                    Center(
-                      child: Text('Содержимое для Настроек'),
+                    Tab(
+                      text: 'Настройки',
                     ),
                   ],
                 ),
+                pinned: true,
               ),
+            ];
+          },
+          body: TabBarView(
+            children: [
+              ProfileSettings(),
+              Center(child: Text('Содержимое для Настроек')),
             ],
           ),
         ),

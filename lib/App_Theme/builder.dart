@@ -4,7 +4,7 @@ import 'app_theme.dart';
 class CustomBuilder {
   static Widget buildTitle(String text) {
     return SizedBox(
-      width: 343,
+      width: double.infinity,
       child: Text(
         text,
         style: AppTheme.titleTextStyle,
@@ -14,10 +14,10 @@ class CustomBuilder {
 
   static Widget buildSubtitle(String text) {
     return SizedBox(
-      width: 343,
+      width: double.infinity,
       child: Text(
         text,
-        style: AppTheme.subtitleTextStyle,
+        style: AppTheme.smallTextStyle,
       ),
     );
   }

@@ -11,53 +11,44 @@ class ProfileSettings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 375,
-      height: 150,
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(),
+    return SingleChildScrollView(
       child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(width: 375, height: 14),
-          Container(
-            clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 12,
-                horizontal: 16,
-              ),
-              child: Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      child: CustomBuilder.buildTitle('У вас подключено'),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0),
-                      child: CustomBuilder.buildSubtitle(
-                          'Подписки, автоплатежи и сервисы на которые \nвы подписались'),
-                    ),
-                    Cards(),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      child: CustomBuilder.buildTitle('Тарифы и лимиты'),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0),
-                      child: CustomBuilder.buildSubtitle(
-                          'Для операций в Сбербанк Онлайн'),
-                    ),
-                  ],
+          SizedBox(height: 14),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: CustomBuilder.buildTitle('У вас подключено'),
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: CustomBuilder.buildSubtitle(
+                      'Подписки, автоплатежи и сервисы на которые'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  child: CustomBuilder.buildSubtitle('вы подписались'),
+                ),
+                Cards(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 30),
+                  child: CustomBuilder.buildTitle('Тарифы и лимиты'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 0),
+                  child: CustomBuilder.buildSubtitle(
+                      'Для операций в Сбербанк Онлайн'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                Tarifs(),
+              ],
             ),
           ),
         ],

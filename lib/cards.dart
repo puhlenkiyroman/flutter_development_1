@@ -7,15 +7,15 @@ class Cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 160,
+      height: 166,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           _buildCard('assets/images/sberprime.png', 'СберПрайм',
-              'Платёж 9 июля', '199р в месяц',
+              'Платёж 9 июля', '199 ₽ в месяц',
               isFirstCard: true),
           _buildCard('assets/images/percent.png', 'Переводы',
-              'Автопродление 21 августа', '199р в месяц'),
+              'Автопродление 21 августа', '199 ₽ в месяц'),
         ],
       ),
     );
@@ -25,7 +25,7 @@ class Cards extends StatelessWidget {
       String imagePath, String title, String payment, String amount,
       {bool isFirstCard = false}) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: isFirstCard ? 0 : 16),
+      padding: EdgeInsets.symmetric(horizontal: isFirstCard ? 0 : 8),
       child: SizedBox(
         width: 216,
         child: Padding(
@@ -56,7 +56,7 @@ class Cards extends StatelessWidget {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -69,27 +69,17 @@ class Cards extends StatelessWidget {
                       const SizedBox(width: 12),
                       Text(
                         title,
-                        style: AppTheme.tabBarTextStyle.copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          height: 0.08,
-                          letterSpacing: -0.40,
-                        ),
+                        style: AppTheme.tabBarTextStyle,
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 22),
+                const SizedBox(height: 12),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(
                     payment,
-                    style: AppTheme.tabBarTextStyle.copyWith(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      height: 0.09,
-                      letterSpacing: -0.41,
-                    ),
+                    style: AppTheme.cardTextStyle,
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -98,9 +88,7 @@ class Cards extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
                   child: Text(
                     amount,
-                    style: AppTheme.cardTextStyle.copyWith(
-                      color: AppTheme.blackColor.withOpacity(0.55),
-                    ),
+                    style: AppTheme.smallTextStyle,
                   ),
                 ),
               ],
