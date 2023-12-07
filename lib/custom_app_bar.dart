@@ -74,7 +74,7 @@ class CustomAppBar extends StatelessWidget {
           body: const TabBarView(
             children: [
               ProfileSettings(),
-              Center(child: Text('Содержимое для Настроек')),
+              Center(child: Text(AppTheme.inSettings)),
             ],
           ),
         ),

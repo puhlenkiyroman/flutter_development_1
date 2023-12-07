@@ -7,6 +7,7 @@ class AppTheme {
   static const Color whiteColor = Colors.white;
   static const Color greyColor = Color(0x8D000000);
   static const Color dividerThinColor = Color(0x1F000000);
+  static const Color chipColor = Color(0x14000000);
   static const Color shadowColor1 = Color(0x114F4F6C);
   static const Color shadowColor2 = Color(0x14000000);
 
@@ -84,8 +85,10 @@ class AppTheme {
 
   // Тексты
 
+  // profile.dart
   static const String profileName = 'Екатерина';
 
+  // categories_chips.dart
   static const List<String> categories = [
     'Еда',
     'Саморазвитие',
@@ -96,6 +99,7 @@ class AppTheme {
     'Наука',
   ];
 
+  // cards.dart
   static const String sberPrimeCardTitle = 'СберПрайм';
   static const String sberPrimeCardPayment = 'Платёж 9 июля';
   static const String sberPrimeCardAmount = '199 ₽ в месяц';
@@ -103,4 +107,13 @@ class AppTheme {
   static const String percentCardTitle = 'Переводы';
   static const String percentCardPayment = 'Автопродление 21 августа';
   static const String percentCardAmount = '199 ₽ в месяц';
+
+  //custom_app_bar.dart
+
+  static const String profile = 'Профиль';
+  static const String settings = 'Профиль';
+  static const String inSettings = 'Содержимое для Настроек';
+
+  //profile_settings.dart
+  static const String title1 = 'У вас подключено';
 }

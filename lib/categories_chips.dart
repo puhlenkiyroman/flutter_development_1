@@ -27,7 +27,7 @@ class _CategoriesChipsState extends State<CategoriesChips> {
               }
             });
           },
-          backgroundColor: Colors.grey[200],
+          backgroundColor: AppTheme.chipColor,
           selectedColor: Colors.grey[500],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
