@@ -5,6 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 Приложение написано на Flutter 3.16.0 и Dart 3.2.0, макет делался на Pixel_3a_API_34_extension_level7_x86_64
+Возможно понадобится установить еще зависимости с помощью flutter pub get
 
 ## Функции приложения
 
