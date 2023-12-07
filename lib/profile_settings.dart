@@ -3,6 +3,7 @@ import 'app_theme/app_theme.dart';
 import 'App_Theme/builder.dart';
 import 'package:flutter_development_1/cards.dart';
 import 'package:flutter_development_1/tarifs.dart';
+import 'package:flutter_development_1/categories_chips.dart';
 
 class ProfileSettings extends StatelessWidget {
   const ProfileSettings({
@@ -48,6 +49,26 @@ class ProfileSettings extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
                 Tarifs(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: CustomBuilder.buildTitle('Интересы '),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: CustomBuilder.buildSubtitle(
+                      'Мы подбираем истории и предложения по темам,'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 2),
+                  child: CustomBuilder.buildSubtitle('которые вам нравятся'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                CategoriesChips(),
               ],
             ),
           ),

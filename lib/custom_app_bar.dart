@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
                 floating: true,
                 expandedHeight: 280,
                 flexibleSpace: PreferredSize(
-                  preferredSize: Size.fromHeight(52),
+                  preferredSize: const Size.fromHeight(52),
                   child: FlexibleSpaceBar(
                     collapseMode: CollapseMode.pin,
                     background: Column(
@@ -40,7 +40,7 @@ class CustomAppBar extends StatelessWidget {
                             const Profile(),
                             IconButton(
                               onPressed: () {},
-                              icon: ImageIcon(
+                              icon: const ImageIcon(
                                 AssetImage(
                                     'assets/images/arrow_right_square.png'),
                                 color: AppTheme.primaryColor,
@@ -58,7 +58,7 @@ class CustomAppBar extends StatelessWidget {
                       AppTheme.tabBarTextStyle.copyWith(color: Colors.black),
                   unselectedLabelStyle:
                       AppTheme.tabBarTextStyle.copyWith(color: Colors.grey),
-                  tabs: [
+                  tabs: const [
                     Tab(
                       text: 'Профиль',
                     ),
@@ -71,7 +71,7 @@ class CustomAppBar extends StatelessWidget {
               ),
             ];
           },
-          body: TabBarView(
+          body: const TabBarView(
             children: [
               ProfileSettings(),
               Center(child: Text('Содержимое для Настроек')),
