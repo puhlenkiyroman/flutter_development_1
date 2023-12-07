@@ -111,7 +111,7 @@ class AppTheme {
   //custom_app_bar.dart
 
   static const String profile = 'Профиль';
-  static const String settings = 'Профиль';
+  static const String settings = 'Настройки';
   static const String inSettings = 'Содержимое для Настроек';
 
   //profile_settings.dart
