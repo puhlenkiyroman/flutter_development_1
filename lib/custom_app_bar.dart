@@ -60,10 +60,10 @@ class CustomAppBar extends StatelessWidget {
                       AppTheme.tabBarTextStyle.copyWith(color: Colors.grey),
                   tabs: const [
                     Tab(
-                      text: 'Профиль',
+                      text: AppTheme.profile,
                     ),
                     Tab(
-                      text: 'Настройки',
+                      text: AppTheme.settings,
                     ),
                   ],
                 ),

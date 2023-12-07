@@ -81,4 +81,26 @@ class AppTheme {
     fontWeight: FontWeight.w500,
     height: 1.29,
   );
+
+  // Тексты
+
+  static const String profileName = 'Екатерина';
+
+  static const List<String> categories = [
+    'Еда',
+    'Саморазвитие',
+    'Технологии',
+    'Дом',
+    'Досуг',
+    'Забота о себе',
+    'Наука',
+  ];
+
+  static const String sberPrimeCardTitle = 'СберПрайм';
+  static const String sberPrimeCardPayment = 'Платёж 9 июля';
+  static const String sberPrimeCardAmount = '199 ₽ в месяц';
+
+  static const String percentCardTitle = 'Переводы';
+  static const String percentCardPayment = 'Автопродление 21 августа';
+  static const String percentCardAmount = '199 ₽ в месяц';
 }

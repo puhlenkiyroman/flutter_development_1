@@ -35,7 +35,7 @@ class Profile extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.only(top: 36),
           child: Text(
-            'Екатерина',
+            AppTheme.profileName,
             style: AppTheme.largeTextStyle,
           ),
         ),

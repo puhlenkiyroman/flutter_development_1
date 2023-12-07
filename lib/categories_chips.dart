@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'App_Theme/app_theme.dart';
 
 class CategoriesChips extends StatefulWidget {
   @override
@@ -6,16 +7,6 @@ class CategoriesChips extends StatefulWidget {
 }
 
 class _CategoriesChipsState extends State<CategoriesChips> {
-  List<String> categories = [
-    'Еда',
-    'Саморазвитие',
-    'Технологии',
-    'Дом',
-    'Досуг',
-    'Забота о себе',
-    'Наука'
-  ];
-
   Set<String> selectedCategories = {};
 
   @override
@@ -23,7 +14,7 @@ class _CategoriesChipsState extends State<CategoriesChips> {
     return Wrap(
       spacing: 8.0,
       runSpacing: 2.0,
-      children: categories.map((category) {
+      children: AppTheme.categories.map((category) {
         return ChoiceChip(
           label: Text(category),
           selected: selectedCategories.contains(category),

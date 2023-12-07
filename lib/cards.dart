@@ -11,11 +11,11 @@ class Cards extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          _buildCard('assets/images/sberprime.png', 'СберПрайм',
-              'Платёж 9 июля', '199 ₽ в месяц',
+          _buildCard('assets/images/sberprime.png', AppTheme.sberPrimeCardTitle,
+              AppTheme.sberPrimeCardPayment, AppTheme.sberPrimeCardAmount,
               isFirstCard: true),
-          _buildCard('assets/images/percent.png', 'Переводы',
-              'Автопродление 21 августа', '199 ₽ в месяц'),
+          _buildCard('assets/images/percent.png', AppTheme.percentCardTitle,
+              AppTheme.percentCardPayment, AppTheme.percentCardAmount),
         ],
       ),
     );
